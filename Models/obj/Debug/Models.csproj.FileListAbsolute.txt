@@ -2,3 +2,4 @@ E:\github\Hotel\Models\bin\Debug\Models.dll
 E:\github\Hotel\Models\bin\Debug\Models.pdb
 E:\github\Hotel\Models\obj\Debug\Models.dll
 E:\github\Hotel\Models\obj\Debug\Models.pdb
+E:\github\Hotel\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

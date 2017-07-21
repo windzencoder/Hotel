@@ -18,7 +18,7 @@ namespace Models
 
         public int DishId { get; set; }
         public string DishName { get; set; }
-        public double UnitPrice { get; set; }
+        public int UnitPrice { get; set; }
         public int CategoryId { get; set; }
         //扩展属性
         public string CategroyName { get; set; }
