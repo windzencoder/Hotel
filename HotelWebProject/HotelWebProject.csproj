@@ -101,6 +101,9 @@
     <Compile Include="Adminhyl\Dishes\DishesManager.aspx.designer.cs">
       <DependentUpon>DishesManager.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adminhyl\Handlers\ExitSys.ashx.cs">
+      <DependentUpon>ExitSys.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Adminhyl\News\NewsPublish.aspx.cs">
       <DependentUpon>NewsPublish.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -588,6 +591,19 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="MP_News.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1E097558-17DA-4228-8494-EABBB3E246EE}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{C8B7A153-4133-421F-B81A-8CCE8C124E19}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Adminhyl\Handlers\ExitSys.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

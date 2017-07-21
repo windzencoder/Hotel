@@ -78,7 +78,7 @@ namespace DAL
             catch (Exception ex)
             {
                 //写入日志.......
-                throw;
+                throw ex;
             }
             finally
             {
@@ -103,7 +103,7 @@ namespace DAL
             catch (Exception ex)
             {
                 //写入日志.......
-                throw;
+                throw ex;
             }
             finally
             {
@@ -128,7 +128,7 @@ namespace DAL
             {
                 conn.Close();
                 //写入日志.......
-                throw;
+                throw ex;
             }
         }
 

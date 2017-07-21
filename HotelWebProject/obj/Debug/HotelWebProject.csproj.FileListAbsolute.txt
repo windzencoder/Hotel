@@ -98,3 +98,7 @@ E:\github\Hotel\HotelWebProject\bin\HotelWebProject.pdb
 E:\github\Hotel\HotelWebProject\obj\Debug\HotelWebProject.csprojResolveAssemblyReference.cache
 E:\github\Hotel\HotelWebProject\obj\Debug\HotelWebProject.dll
 E:\github\Hotel\HotelWebProject\obj\Debug\HotelWebProject.pdb
+E:\github\Hotel\HotelWebProject\bin\DAL.dll
+E:\github\Hotel\HotelWebProject\bin\Models.dll
+E:\github\Hotel\HotelWebProject\bin\DAL.pdb
+E:\github\Hotel\HotelWebProject\bin\Models.pdb

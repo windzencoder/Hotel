@@ -25,7 +25,7 @@
                     <li><a href="/Adminhyl/SuggestionList.aspx">投诉管理</a></li>
                     <li><a href="/Adminhyl/Recruitment/RecruitmentPublish.aspx">发布招聘</a></li>
                     <li><a href="/Adminhyl/Recruitment/RecruitmentManager.aspx">招聘管理</a></li>
-                    <li><a class="navLast" href="/Adminhyl/ExitSys.ashx">退出系统</a></li>
+                    <li><a class="navLast" href="/Adminhyl/Handlers/ExitSys.ashx">退出系统</a></li>
                 </ul>
             </div>
         </div>
