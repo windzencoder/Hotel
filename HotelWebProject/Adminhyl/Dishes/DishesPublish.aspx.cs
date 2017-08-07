@@ -28,9 +28,35 @@ namespace HotelWebProject.Adminhyl
                 {
                     this.btnEdit.Visible = false;
                 }
+                else if (Request.QueryString["Operation"] == "1")//修改
+                {
+                    this.btnPublish.Visible = false;
+                    string dishId = Request.QueryString["dishId"];
+                    if (string.IsNullOrEmpty(dishId))//如果没有提供该参数
+                    {
+                        Response.Redirect("~/Adminhyl/Default.aspx");
+                        return;
+                    }
+                    //根据菜品编号获取菜品对象
+                    Dish dish = new DishService().GetDishById(dishId);
+                    if (dish == null)
+                    {
+                        Response.Redirect("~/Adminhyl/Default.aspx");
+                        return;
+                    }
+                    //保存要修改的菜品id
+                    ViewState["dishId"] = dishId;
+
+                    //显示要修改的菜品信息
+                    this.txtDishName.Text = dish.DishName;
+                    this.txtUnitPrice.Text = dish.UnitPrice.ToString();
+                    this.ddlCategory.SelectedValue = dish.CategoryId.ToString();
+                    this.dishImage.ImageUrl = "~/Images/dish/" + dishId + ".png";
+                }
                 else
                 {
-
+                    Response.Redirect("~/Adminhyl/Default.aspx");
+                    return;
                 }
 
             }
@@ -39,7 +65,7 @@ namespace HotelWebProject.Adminhyl
 
         }
 
-        //新增菜品按钮事件
+        //新增菜品or修改按钮事件
         protected void btnPublish_Click(object sender, EventArgs e)
         {
             //数据验证
@@ -73,6 +99,11 @@ namespace HotelWebProject.Adminhyl
                 CategoryId = Convert.ToInt32(this.ddlCategory.SelectedValue)
             };
 
+            if (ViewState["dishId"] != null)//如果是修改则需要封装菜品编号
+            {
+                dish.DishId = Convert.ToInt32(ViewState["dishId"]);
+            }
+
             try
             {
                 if (this.btnPublish.Visible)//添加菜品
@@ -91,6 +122,12 @@ namespace HotelWebProject.Adminhyl
                     this.txtDishName.Text = "";
                     this.txtUnitPrice.Text = "";
                     this.ddlCategory.SelectedIndex = -1;
+                }
+                else//修改
+                {
+                    new DishService().ModifyDish(dish);
+                    this.UploadImage(dish.DishId);
+                    this.itaMsg.Text = "<script>alert('修改成功！');location.href='/Adminhyl/Dishes/DishesManager.aspx'</script>";
                 }
             }
             catch (Exception ex)

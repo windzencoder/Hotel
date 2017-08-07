@@ -21,6 +21,6 @@ namespace Models
         public int UnitPrice { get; set; }
         public int CategoryId { get; set; }
         //扩展属性
-        public string CategroyName { get; set; }
+        public string CategoryName { get; set; }
     }
 }

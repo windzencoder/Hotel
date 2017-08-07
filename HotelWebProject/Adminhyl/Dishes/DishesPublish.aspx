@@ -24,7 +24,7 @@
         <div class="txtItemdiv">
             <asp:Button ID="btnPublish" CssClass="btncss" runat="server" Text="新增菜品" 
                 onclick="btnPublish_Click" />
-            <asp:Button ID="btnEdit" CssClass="btncss" runat="server" Text="提交修改" />
+            <asp:Button ID="btnEdit" CssClass="btncss" runat="server" Text="提交修改"  onclick="btnPublish_Click" />
             <asp:Literal ID="itaMsg" runat="server"></asp:Literal>
         </div>
     </div>
