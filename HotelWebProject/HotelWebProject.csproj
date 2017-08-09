@@ -265,7 +265,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Adminhyl\TxtEditor\attached\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +284,8 @@
     <Content Include="Adminhyl\Styles\Images\navbg_ht.jpg" />
     <Content Include="Adminhyl\Styles\Images\topbg_ht.png" />
     <Content Include="Adminhyl\SuggestionList.aspx" />
+    <Content Include="Adminhyl\TxtEditor\attached\image\20140816\20140816113801_5118.png" />
+    <Content Include="Adminhyl\TxtEditor\bin\LitJSON.dll" />
     <Content Include="Adminhyl\TxtEditor\demo.aspx" />
     <Content Include="Adminhyl\TxtEditor\kindeditor.js" />
     <Content Include="Adminhyl\TxtEditor\lang\ar.js" />
@@ -572,8 +573,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Adminhyl\Adminhyl.Master" />
-    <Content Include="Adminhyl\TxtEditor\file_manager_json.ashx" />
-    <Content Include="Adminhyl\TxtEditor\upload_json.ashx" />
     <Content Include="Handlers\ValidateCode.ashx" />
     <Content Include="Handlers\Web.config" />
     <Content Include="MP_Info.Master" />
@@ -604,6 +603,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Adminhyl\Handlers\ExitSys.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Adminhyl\TxtEditor\file_manager_json.ashx" />
+    <Content Include="Adminhyl\TxtEditor\upload_json.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

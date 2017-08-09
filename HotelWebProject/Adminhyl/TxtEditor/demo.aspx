@@ -14,11 +14,11 @@ protected void Page_Load(object sender, EventArgs e)
 <head runat="server">
     <meta charset="utf-8" />
     <title>KindEditor ASP.NET</title>
-    <link rel="stylesheet" href="themes/default/default.css" />
-	<link rel="stylesheet" href="plugins/code/prettify.css" />
-	<script charset="utf-8" src="kindeditor.js"></script>
-	<script charset="utf-8" src="lang/zh_CN.js"></script>
-	<script charset="utf-8" src="plugins/code/prettify.js"></script>
+    <link rel="stylesheet" href="/Adminhyl/TxtEditor/themes/default/default.css" />
+	<link rel="stylesheet" href="/Adminhyl/TxtEditor/plugins/code/prettify.css" />
+	<script  type="text/javascript" charset="utf-8" src="/Adminhyl/TxtEditor/kindeditor.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="/Adminhyl/TxtEditor/lang/zh_CN.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="/Adminhyl/TxtEditor/plugins/code/prettify.js"></script>
 	<script>
 		KindEditor.ready(function(K) {
 			var editor1 = K.create('#content1', {

@@ -5,10 +5,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="/Adminhyl/TxtEditor/themes/default/default.css" />
     <link rel="stylesheet" href="/Adminhyl/TxtEditor/plugins/code/prettify.css" />
-    <script charset="utf-8" src="/Adminhyl/TxtEditor/kindeditor.js"></script>
-    <script charset="utf-8" src="/Adminhyl/TxtEditor/lang/zh_CN.js"></script>
-    <script charset="utf-8" src="/Adminhyl/TxtEditor/plugins/code/prettify.js"></script>
-    <script>
+    <script type="text/javascript" charset="utf-8" src="/Adminhyl/TxtEditor/kindeditor.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/Adminhyl/TxtEditor/lang/zh_CN.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/Adminhyl/TxtEditor/plugins/code/prettify.js"></script>
+    <script type="text/javascript">
         KindEditor.ready(function (K) {
             var editor1 = K.create('#<%=txtContent.ClientID %>', {
                 cssPath: '../TxtEditor/plugins/code/prettify.css',
@@ -46,7 +46,9 @@
             <textarea id="txtContent" cols="100" rows="8" style="width: 958px; height: 300px;
                 visibility: hidden;" runat="server"></textarea></div>
         <div class="txtItemdiv">
-            <asp:Button ID="btnPublish" CssClass="btncss" runat="server" Text="立即发布" />
+            <asp:Button ID="btnPublish" CssClass="btncss" runat="server" Text="立即发布" 
+                onclick="btnPublish_Click" />
+            <asp:Button ID="btnModify" CssClass="btncss" runat="server" Text="提交修改" onclick="btnPublish_Click"/>
             <asp:Literal ID="ltaMsg" runat="server"></asp:Literal>
         </div>
     </div>
