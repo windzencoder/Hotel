@@ -32,7 +32,7 @@ namespace Models
         public String CustomerPhone { get; set; }
         public String CustomerEmail { get; set; }
         public String Comments { get; set; }
-        public DateTime datetime { get; set; }
+        public DateTime BookTime { get; set; }
         public int OrderStatus { get; set; }
 
 
