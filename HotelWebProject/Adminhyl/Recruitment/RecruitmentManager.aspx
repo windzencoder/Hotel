@@ -20,51 +20,20 @@
             工作地点</div>
         <div class="bitem-title" style="width: 120px;">
             操作</div>
-        <div class="bitem">
-            大堂经理</div>
-        <div class="bitem">
-            全职</div>
-        <div class="bitem">
-            3年</div>
-        <div class="bitem">
-            本科</div>
-        <div class="bitem">
-            2</div>
-        <div class="bitem">
-            天津</div>
-        <div class="bitem" style="width: 120px;">
-            <a href='RecruitmentModify.aspx?PostId=100000' target="_blank">修改</a> <a href="#">删除</a>
-        </div>
-        <div class="bitem">
-            接待员</div>
-        <div class="bitem">
-            全职</div>
-        <div class="bitem">
-            1年</div>
-        <div class="bitem">
-            高中</div>
-        <div class="bitem">
-            5</div>
-        <div class="bitem">
-            北京</div>
-        <div class="bitem" style="width: 120px;">
-            <a href='RecruitmentModify.aspx?PostId=100001' target="_blank">修改</a> <a href="#">删除</a>
-        </div>
-        <div class="bitem">
-            总经理助理</div>
-        <div class="bitem">
-            全职</div>
-        <div class="bitem">
-            3年</div>
-        <div class="bitem">
-            本科</div>
-        <div class="bitem">
-            1</div>
-        <div class="bitem">
-            天津</div>
-        <div class="bitem" style="width: 120px;">
-            <a href='RecruitmentModify.aspx?PostId=100002' target="_blank">修改</a> <a href="#">删除</a>
-        </div>
+        <asp:Repeater ID="rptList" runat="server">
+            <ItemTemplate>
+                <div class="bitem"><%#Eval("PostName")%></div>
+                <div class="bitem"><%#Eval("PostType")%></div>
+                <div class="bitem"><%#Eval("Experience")%></div>
+                <div class="bitem"><%#Eval("EduBackground")%></div>
+                <div class="bitem"><%#Eval("RequireCount")%></div>
+                <div class="bitem"><%#Eval("PostPlace")%></div>
+                <div class="bitem" style="width: 120px;">
+                    <a href='RecruitmentModify.aspx?PostId=100000' target="_blank">修改</a>
+                    <asp:LinkButton ID="btnDel" OnClick="btnDel_Click" OnClientClick="return confirm('确认删除？')" CommandArgument='<%#Eval("PostId")%>' runat="server">删除</asp:LinkButton>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
     <asp:Literal ID="ltaMsg" runat="server"></asp:Literal>
 </asp:Content>
