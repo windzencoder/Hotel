@@ -59,7 +59,8 @@
             <div class="itemtitle">
             </div>
             <div class="itemcontent">
-                <asp:Button ID="btnSubmit" CssClass="btncss" runat="server" Text="提交投诉"  />
+                <asp:Button ID="btnSubmit" CssClass="btncss" runat="server" Text="提交投诉" 
+                    onclick="btnSubmit_Click"  />
                 <asp:Literal ID="ltaMsg" runat="server"></asp:Literal>
             </div>
         </div>
