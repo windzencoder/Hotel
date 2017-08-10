@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL;
+using Models;
 
 namespace HotelWebProject.CompanyDishes
 {
@@ -11,7 +13,11 @@ namespace HotelWebProject.CompanyDishes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            if (!IsPostBack)
+            {
+                this.rptList.DataSource = new DishService().GetDishes("");
+                this.DataBind();
+            }
         }
     }
 }

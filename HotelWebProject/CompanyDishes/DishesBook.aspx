@@ -85,15 +85,18 @@
                 验证码：
             </div>
             <div class="itemcontent">
-                <asp:TextBox ID="txtValidateCode" CssClass="txt" runat="server" Width="50px"></asp:TextBox><span>&nbsp;*<asp:Image
-                    ID="Image1" ImageUrl="~/Handlers/ValidateCode.ashx" runat="server" /></span>
+                <asp:TextBox ID="txtValidateCode" CssClass="txt" runat="server" Width="50px"></asp:TextBox>
+                <span>&nbsp;*
+                    <asp:Image ID="Image1" ImageUrl="~/Handlers/ValidateCode.ashx" runat="server" />
+                </span>
             </div>
         </div>
         <div class="item">
             <div class="itemtitle">
             </div>
             <div class="itemcontent">
-                <asp:Button ID="btnBook" runat="server" CssClass="btncss" Text="马上预定" />
+                <asp:Button ID="btnBook" runat="server" CssClass="btncss" Text="马上预定" 
+                    onclick="btnBook_Click" />
                 <asp:Literal ID="ltaMsg" runat="server"></asp:Literal>
             </div>
         </div>
