@@ -53,7 +53,7 @@
             电子邮件：<asp:TextBox ID="txtEmail" class="txtInput" runat="server"></asp:TextBox>
         </div>
         <div class="txtItemdiv">
-            <asp:Button ID="btnPublish" CssClass="btncss" runat="server" Text="立即发布" />
+            <asp:Button ID="btnPublish" OnClick="btnPublish_Click" CssClass="btncss" runat="server" Text="立即发布" />
             <asp:Literal ID="ltaMsg" runat="server"></asp:Literal>
         </div>
     </div>
