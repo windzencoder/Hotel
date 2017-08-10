@@ -19,6 +19,7 @@ namespace HotelWebProject.Adminhyl
                 rptList.DataSource = new RecruitmentService().GetAllRecList();
                 rptList.DataBind();
             }
+            this.ltaMsg.Text = "";
         }
 
         protected void btnDel_Click(object sender, EventArgs e)

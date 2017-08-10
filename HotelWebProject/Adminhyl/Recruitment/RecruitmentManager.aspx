@@ -29,7 +29,7 @@
                 <div class="bitem"><%#Eval("RequireCount")%></div>
                 <div class="bitem"><%#Eval("PostPlace")%></div>
                 <div class="bitem" style="width: 120px;">
-                    <a href='RecruitmentModify.aspx?PostId=100000' target="_blank">修改</a>
+                    <a href='RecruitmentModify.aspx?PostId=<%#Eval("PostId")%>' target="_blank">修改</a>
                     <asp:LinkButton ID="btnDel" OnClick="btnDel_Click" OnClientClick="return confirm('确认删除？')" CommandArgument='<%#Eval("PostId")%>' runat="server">删除</asp:LinkButton>
                 </div>
             </ItemTemplate>

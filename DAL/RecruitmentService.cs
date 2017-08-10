@@ -48,7 +48,7 @@ namespace DAL
         public List<Recruitment> GetAllRecList()
         {
             string sql = "select PostId, PostName, PostType, Experience, EduBackground, RequireCount, PostPlace ";
-            sql += "from Recruitment order by PublishTime";
+            sql += "from Recruitment order by PublishTime desc";
             List<Recruitment> list = new List<Recruitment>();
             SqlDataReader objReader = SQLHelper.GetReader(sql);
             while (objReader.Read())
