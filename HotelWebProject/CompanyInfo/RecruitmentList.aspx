@@ -16,35 +16,23 @@
             <div class="detail">
                 详情</div>
         </div>
-        <div class="itemdiv">
-            <div class="position">
-                <a href='RecruitmentDetail.aspx?PostId=100000' target="_blank">大堂经理</a></div>
-            <div class="place">
-                天津</div>
-            <div class="needcount">
-                2</div>
-            <div class="detail">
-                <a href='RecruitmentDetail.aspx?PostId=100000' target="_blank">详情</a></div>
-        </div>
-        <div class="itemdiv">
-            <div class="position">
-                <a href='RecruitmentDetail.aspx?PostId=100001' target="_blank">接待员</a></div>
-            <div class="place">
-                北京</div>
-            <div class="needcount">
-                5</div>
-            <div class="detail">
-                <a href='RecruitmentDetail.aspx?PostId=100001' target="_blank">详情</a></div>
-        </div>
-        <div class="itemdiv">
-            <div class="position">
-                <a href='RecruitmentDetail.aspx?PostId=100002' target="_blank">总经理助理</a></div>
-            <div class="place">
-                天津</div>
-            <div class="needcount">
-                1</div>
-            <div class="detail">
-                <a href='RecruitmentDetail.aspx?PostId=100002' target="_blank">详情</a></div>
-        </div>
+        <asp:Repeater ID="rptList" runat="server">
+            <ItemTemplate>
+                <div class="itemdiv">
+                    <div class="position">
+                        <a href='RecruitmentDetail.aspx?PostId=<%#Eval("PostId")%>' target="_blank"><%#Eval("PostName")%></a>
+                     </div>
+                    <div class="place">
+                        <%#Eval("PostPlace")%>
+                    </div>
+                    <div class="needcount">
+                        <%#Eval("RequireCount")%>
+                    </div>
+                    <div class="detail">
+                        <a href='RecruitmentDetail.aspx?PostId=<%#Eval("PostId")%>' target="_blank">详情</a>
+                    </div>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
 </asp:Content>

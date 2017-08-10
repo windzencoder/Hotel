@@ -76,7 +76,7 @@ namespace DAL
         /// <returns></returns>
         public Recruitment GetPostById(string postId)
         {
-            string sql = "select PostId, PostName, PostType, PostPlace, PostDesc, PostRequire, Experience, EduBackground, RequireCount, Manager, PhoneNumber, Email";
+            string sql = "select PostId, PostName, PostType, PostPlace, PostDesc, PostRequire, Experience, EduBackground, RequireCount, Manager, PublishTime,PhoneNumber, Email";
             sql += " from  Recruitment where PostId=@PostId ";
             Recruitment objRec = null;
             SqlParameter[] param = new SqlParameter[]
@@ -99,7 +99,8 @@ namespace DAL
                     RequireCount = Convert.ToInt32(objReader["RequireCount"]),
                     Manager = objReader["Manager"].ToString(),
                     PhoneNumber = objReader["PhoneNumber"].ToString(),
-                    Email = objReader["Email"].ToString()
+                    Email = objReader["Email"].ToString(),
+                    PublishTime = Convert.ToDateTime(objReader["PublishTime"])
 
                 };
             }

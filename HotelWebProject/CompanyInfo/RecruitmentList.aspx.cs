@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL;
 
 
 namespace HotelWebProject.CompanyInfo
@@ -12,7 +13,12 @@ namespace HotelWebProject.CompanyInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+
+            if (!IsPostBack)
+            {
+                this.rptList.DataSource = new RecruitmentService().GetAllRecList();
+                this.rptList.DataBind();
+            }
         }
     }
 }
