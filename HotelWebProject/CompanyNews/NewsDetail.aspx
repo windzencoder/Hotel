@@ -6,13 +6,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
   <div class="newstitle">
-        经理应邀考察访问日韩快餐行业
+      <asp:Literal ID="ltaNewsTitle" runat="server"></asp:Literal>
     </div>
     <div class="newsdesc">
-        发布时间：2009-12-15 08:21:58 &nbsp;&nbsp; 文字：【<a href="javascript:fontZoom(16)">大</a>】【<a
+        发布时间：<asp:Literal ID="ltaPublishTime" runat="server"></asp:Literal> &nbsp;&nbsp; 文字：【<a href="javascript:fontZoom(16)">大</a>】【<a
             href="javascript:fontZoom(14)">中</a>】【<a href="javascript:fontZoom(12)">小</a>】
     </div>
     <div class="newscontent">
-        公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业公司总经理应邀考察访问日韩快餐行业
+        <asp:Literal ID="ltaNewsContents" runat="server"></asp:Literal>
     </div>
 </asp:Content>

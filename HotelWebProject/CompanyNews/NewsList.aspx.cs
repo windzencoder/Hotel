@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL;
 
 namespace HotelWebProject.CompanyNews
 {
@@ -11,7 +12,11 @@ namespace HotelWebProject.CompanyNews
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            if (!IsPostBack)
+            {
+                this.rptList.DataSource = new NewsService().GetNews(10);
+                this.rptList.DataBind();
+            }
         }
     }
 }

@@ -65,7 +65,7 @@
 }
 .newstitle
 {
-	width: 218px;
+	width: 200px;
 	float: left;
 	margin: 7px 0px 0px 14px;
 	display: inline;
@@ -81,7 +81,7 @@
 }
 .newsdate
 {
-	width: 60px;
+	width: 70px;
 	float: left;
 	margin: 7px 0px 0px 12px;
 	display: inline;

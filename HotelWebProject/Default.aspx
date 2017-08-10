@@ -72,38 +72,18 @@
                 <div class="lefttitle">
                     最新新闻
                 </div>
-                <div class="newslist">
-                    <div class="newstitle">
-                        <a href="#">订餐最低8折优惠活动进行中团体订餐 </a>
-                    </div>
-                    <div class="newsdate">
-                        2014-03-08
-                    </div>
-                </div>
-                <div class="newslist">
-                    <div class="newstitle">
-                        <a href="#">团体订餐最低8折优惠活动进订餐最低8</a>
-                    </div>
-                    <div class="newsdate">
-                        2014-03-08
-                    </div>
-                </div>
-                <div class="newslist">
-                    <div class="newstitle">
-                        <a href="#">会员卡充值返点活动开始全国范围会员</a>
-                    </div>
-                    <div class="newsdate">
-                        2014-03-08
-                    </div>
-                </div>
-                <div class="newslist">
-                    <div class="newstitle">
-                        <a href="#">全国范围会员卡充值返点活动开始全值</a>
-                    </div>
-                    <div class="newsdate">
-                        2014-03-08
-                    </div>
-                </div>
+                <asp:Repeater ID="rptList" runat="server">
+                    <ItemTemplate>
+                        <div class="newslist">
+                            <div class="newstitle">
+                                <a href='/CompanyNews/NewsDetail.aspx?newsId=<%#Eval("NewsId") %>'><%#Eval("NewsTitle") %></a>
+                            </div>
+                            <div class="newsdate">
+                                <a href="#"><%#Eval("PublishTime", "{0:yyyy-MM-dd}") %></a>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
             <div id="rightDiv">
                 <div id="righttitle1">
